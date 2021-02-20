@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  background-image: url("imgs/bg.png");
+  background-color:#f2f2f2;
+  
+}
+#canvas {
+  border: 1px solid black;
+}
+section{
+  width: 100%;
+  padding: 10rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f;
+}
+nav > ul {
+  list-style: none;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:1rem;
+  text-decoration: none;
+  color: rgb(224, 223, 223);
+}
+nav > ul > li > a:hover {
+  background-color: rgb(224, 223, 223);
+  color: rgba(0, 0, 0, 0.842);
+  transition: 0.2s ease-in;
+}
+#nike_logo {
+  height: 1rem;
+  margin: 14px 16px;
+}
+
+#menubutton {
+  display: none;
+  transition: fill .2s ;
+  fill: rgb(224, 223, 223);
+}
+#menubutton:hover {
+  cursor: pointer;
+  fill: rgb(121, 121, 121);
+}
+
+.grid-container {
+  margin-top: 80px;
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "img1 img1 desc1"
+    "desc2 img2 img2"
+    "img4 img5 img6";
+}
+.grid-container > div {
+  padding: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-size: 16px;
+}
+.grid-container > div > img {
+  width: 100%;
+  box-shadow: 2px 2px 16px 2px #1414142a;
+}
+.img1 {
+  grid-area: img1;
+}
+
+.desc1 {
+  grid-area: desc1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.desc2 {
+  grid-area: desc2;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.842);
+
+  color: rgba(224, 223, 223, 0.794);
+  font-size: 12px;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .grid-container {
+    padding: 0 1%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #menubutton {
+    display: inline;
+    fill: rgb(224, 223, 223);
+  }
+  nav > ul {
+    display: none;
+    list-style: none;
+  }
+  .grid-container {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.25fr 0.5fr 0.25fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "img1"
+      "desc1"
+      "img2"
+      "desc2"
+      "img4"
+      "img5"
+      "img6";
+  }
+  .grid-container > div {
+    padding: 1vh;
+  }
+
+}
+
